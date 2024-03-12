@@ -49,7 +49,7 @@ const BannerHome = (props: any) => {
 
   const handleSendtoApp = () => {};
 
-  const handleDelete = () => {};
+  const handleDelete = () => {}
 
   return (
     <Box
