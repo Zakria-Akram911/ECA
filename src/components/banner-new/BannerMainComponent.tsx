@@ -210,7 +210,9 @@ const BannerMainComponent = () => {
         <BannerShop />
       )}
       {tab === "NewBanner" && (
-        <BannerNewBanner />
+        <BannerNewBanner
+        category = {category}
+        />
       )}
     </Box>
   )

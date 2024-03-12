@@ -3,11 +3,15 @@ import {
   Box,
   Button,
   FormControl,
+  FormControlLabel,
+  FormLabel,
   Grid,
   MenuItem,
   Select,
+  TextField,
   Typography,
   styled,
+  Switch
 } from "@mui/material";
 import upperLine from "../../assets/line.svg";
 import sideLine from "../../assets/sideLine.svg";
@@ -27,11 +31,69 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
+const Android12Switch = styled(Switch)(({ theme }) => ({
+  padding: 6,
+  "& .MuiSwitch-track": {
+    borderRadius: 30 / 2,
+    "&:before, &:after": {
+      content: '""',
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      width: 16,
+      height: 16,
+    },
+    "&:before": {
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
+        theme.palette.getContrastText(theme.palette.primary.main)
+      )}" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>')`,
+      left: 12,
+    },
+    "&:after": {
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
+        theme.palette.getContrastText(theme.palette.primary.main)
+      )}" d="M19,13H5V11H19V13Z" /></svg>')`,
+      right: 12,
+    },
+  },
+  "& .MuiSwitch-thumb": {
+    boxShadow: "none",
+    width: 20,
+    height: 20,
+    margin: 0,
+  },
+  "& .MuiSwitch-switchBase": {
+    "&.Mui-checked": {
+      color: "#fff",
+      "& + .MuiSwitch-track": {
+        opacity: 1,
+        backgroundColor: theme.palette.mode === "dark" ? "#1338bf" : "#1338bf",
+      },
+    },
+  },
+}));
+
+
 const BannerIntro = (props: any) => {
   const [imagePreview, setImagePreview] = React.useState<any>(props?.bannerURL);
   const [image, setImage] = React.useState();
   const [category, setCategory] = React.useState(props?.category[0]);
-  console.log(image)
+  const [formValues, setFormValues] = React.useState<any>({
+    title: "",
+    subtitle: "",
+    sendNotification: true,
+  })
+  // console.log(image);
+
+  const handleFormChange = (e: any) : void => {
+    const {name, value, checked} = e.target;
+    const newValue = name == 'sendNotification' ? checked : value;
+    console.log(newValue)
+    setFormValues({
+      ...formValues,
+      [name]: newValue
+    })
+  }
 
   const handleImageSelect = (e: any) => {
     if (e?.target) {
@@ -55,6 +117,13 @@ const BannerIntro = (props: any) => {
       reader.readAsDataURL(file);
     }
   };
+
+  function handleFormSubmit(e: any): void {
+    e.preventDefault();
+    console.log(formValues)
+  }
+
+  const handleSendtoApp = () => {};
 
   return (
     <Box
@@ -152,7 +221,7 @@ const BannerIntro = (props: any) => {
                 sx={{
                   background: "whitesmoke",
                   color: "black",
-                  width: "215px",
+                  width: "240px",
                   height: "35px",
                   display: "flex",
                   alignItems: "center",
@@ -173,7 +242,7 @@ const BannerIntro = (props: any) => {
                   sx={{
                     color: "black",
                     fontSize: "14px",
-                    lineHeight:"19.12px",
+                    lineHeight: "19.12px",
                     fontFamily: "myAvenirLight",
                   }}
                 >
@@ -195,7 +264,7 @@ const BannerIntro = (props: any) => {
                       background: "whitesmoke",
                       border: "0.5px solid #939393",
                       // color: "black",
-                      width: "260px",
+                      width: "283px",
                       height: "35px",
                       borderRadius: "5px",
                       position: "relative",
@@ -204,7 +273,7 @@ const BannerIntro = (props: any) => {
                       ".MuiOutlinedInput-notchedOutline": { border: 0 },
 
                       "& .MuiSelect-icon": {
-                        right: "9px", // Adjust the right value as needed
+                        right: "10px", // Adjust the right value as needed
                         top: "50%",
                         transform: "translateY(-50%)",
                         color: "black",
@@ -246,6 +315,138 @@ const BannerIntro = (props: any) => {
               </Box>
             </Box>
           </Box>
+          <Box sx={{m:"20px 0px 5px"}}>
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  lineHeight: "21.84px",
+                  letterSpacing: "0.2px",
+                  color: "black",
+                }}
+              >
+                Push Notifications
+              </Typography>
+            </Box>
+            <Box>
+              <form onSubmit={handleFormSubmit}>
+                <FormControl>
+                  <Box sx={{ m: "5px 0px" }}>
+                    <FormLabel sx={{ fontSize: "12px", lineHeight: "16.39px" }}>
+                      * A title to catch your audience attention
+                    </FormLabel>
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      placeholder="Title i.e. ‘New Season’"
+                      name="title"
+                      value={formValues.title}
+                      onChange={handleFormChange}
+                      sx={{
+                        "& .MuiInputBase-root":{
+                          height:"37px"
+                        },
+                        // "& input": {
+                        //   p: "20px 10px",
+                        // },
+                        "& ::placeholder":{
+                          fontSize:"13px"
+                        }
+                      }}
+                    />
+                  </Box>
+                  <Box sx={{ m: "5px 0px" }}>
+                    <FormLabel sx={{ fontSize: "12px", lineHeight: "16.39px" }}>
+                    * A subtitle to preview what’s in store
+                    </FormLabel>
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      multiline
+                      rows={2}
+                      placeholder="Subtitle i.e. ‘All new spring dresses’"
+                      name="subtitle"
+                      value={formValues.subtitle}
+                      onChange={handleFormChange}
+                      sx={{
+                        "& .MuiInputBase-root": {
+                          p: "5px 10px",
+                        },
+                        "& ::placeholder":{
+                          fontSize:"13px"
+                        }
+                      }}
+                    />
+                  </Box>
+                </FormControl>
+              </form>
+            </Box>
+          </Box>
+          <Grid
+            container
+            sx={{
+              alignItems: "center",
+              justifyContent: "space-between",
+              borderBottom: "1px solid rgba(0,0,0,0.2)",
+              pt: "10px",
+              pb: "10px",
+              pr: "10px",
+            }}
+          >
+            <Grid item xs={5}>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontSize: "14px",
+                  // color: `${disableFeature ? "#B3C3D5" : "#1F2834"}`,
+                  fontWeight: 600,
+                  lineHeight:"19.12px",
+                  fontFamily: "myAvenirRegular",
+                }}
+              >
+                Send notification
+              </Typography>
+            </Grid>
+
+            <Grid item xs={2}>
+              <FormControlLabel
+                control={
+                  <Android12Switch
+                    sx={{ m: 0 }}
+                    checked={formValues.sendNotification}
+                    name="sendNotification"
+                    onChange={handleFormChange}
+                  />
+                }
+                label=""
+                sx={{ m: "0" }}
+              />
+            </Grid>
+          </Grid>
+          <Box>
+          <Button
+            variant="contained"
+            sx={{
+              bgcolor: "#222222",
+              color: "White",
+              width: "100%",
+              mt: 2,
+              fontSize: "18px",
+              fontWeight: "bold",
+              height: "37px",
+              boxShadow: "none",
+              textTransform: "none",
+              ":hover": {
+                bgcolor: "#222222",
+                boxShadow: "none",
+              },
+            }}
+            onClick={handleSendtoApp}
+          >
+            Send to app
+          </Button>
+          </Box>
         </Grid>
         <Grid item xs={0.3}></Grid>
         <Grid
@@ -261,7 +462,7 @@ const BannerIntro = (props: any) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            maxHeight: "400px",
+            maxHeight: "350px",
           }}
         >
           <Box
@@ -325,7 +526,7 @@ const BannerIntro = (props: any) => {
               🛈 Dimensions need to be exact
             </Typography>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               width: "100%",
@@ -348,7 +549,7 @@ const BannerIntro = (props: any) => {
                 borderRadius: "5px 5px 0px 0px",
               }}
             />
-          </Box>
+          </Box> */}
         </Grid>
         <Grid item sx={{ display: "flex" }}>
           <img

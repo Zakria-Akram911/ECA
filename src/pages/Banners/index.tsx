@@ -40,7 +40,7 @@ return(
   <Sidebar>
       <Box>
         <Typography sx={{ fontSize: "20px", color: "#222222" }}>
-          Categories
+          Banners
         </Typography>
       </Box>
       <Box>
