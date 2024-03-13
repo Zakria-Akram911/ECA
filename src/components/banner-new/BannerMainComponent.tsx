@@ -5,7 +5,10 @@ import BannerHome from './BannerHome';
 import BannerShop from './BannerShop';
 import BannerNewBanner from './BannerNewBanner';
 
-const category = ["New Season", "Winter", "Summer"]
+const category = ["New Season", "Winter", "Summer"];
+const shopCategories = ["T-Shirts", "Casual Shirts", "Pants"]
+const numberOfItems = ["1","2","3","4","5","6","7"]
+
 const BannerMainComponent = () => {
   const [tab, setTab] = React.useState<string>("Intro");
   const matchesLargeScreen = useMediaQuery("(min-width:1281px)");
@@ -133,7 +136,7 @@ const BannerMainComponent = () => {
               border: `${
                 tab === "Home" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
               }`,
-              borderRight:"0",
+              // borderRight:"0",
               textTransform: "math-auto",
               fontSize: "18px",
               p: "5px 25px",
@@ -160,7 +163,7 @@ const BannerMainComponent = () => {
               border: `${
                 tab === "Shop" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
               }`,
-              borderRight:"0",
+              // borderRight:"0",
               textTransform: "math-auto",
               fontSize: "18px",
               p: "5px 25px",
@@ -207,7 +210,10 @@ const BannerMainComponent = () => {
         <BannerHome />
       )}
       {tab === "Shop" && (
-        <BannerShop />
+        <BannerShop
+          category={shopCategories}
+          numberOfItems = {numberOfItems}
+        />
       )}
       {tab === "NewBanner" && (
         <BannerNewBanner

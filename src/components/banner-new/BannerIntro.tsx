@@ -128,7 +128,7 @@ const BannerIntro = (props: any) => {
   return (
     <Box
       sx={{
-        mt: 3,
+        mt: 5,
       }}
     >
       <Grid
