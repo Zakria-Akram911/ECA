@@ -12,8 +12,9 @@ import {
 import upperLine from "../../assets/line.svg";
 import sideLine from "../../assets/sideLine.svg";
 import { toast } from "react-toastify";
-import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
-import DoneIcon from '@mui/icons-material/Done';
+// import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
+import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
+import DoneIcon from "@mui/icons-material/Done";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const VisuallyHiddenInput = styled("input")({
@@ -46,8 +47,8 @@ const BannerShop = (props: any) => {
         img.src = event.target?.result as string;
 
         img.onload = () => {
-          if (img.width !== 1195 || img.height !== 1200) {
-            toast.error("Dimensions should need to be exact 1195px x 1200px");
+          if (img.width !== 1082 || img.height !== 305) {
+            toast.error("Dimensions should need to be exact 1082px x 305px");
           } else {
             setImage(file);
             setImagePreview(event.target?.result as string);
@@ -70,7 +71,7 @@ const BannerShop = (props: any) => {
     <Box
       sx={{
         mt: 5,
-        mb:5,
+        mb: 5,
       }}
     >
       <Grid
@@ -472,6 +473,7 @@ const BannerShop = (props: any) => {
                       opacity: "0",
                       zIndex: "2",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                     checked={radioSelection === "dresses"}
                     onChange={handleRadioChange}
@@ -492,8 +494,15 @@ const BannerShop = (props: any) => {
                       left: "-4px",
                     }}
                   >
-                    <Box sx={{position:"absolute", top:"0px"}}>
-                      <DoneIcon sx={{color:"white", fontSize:"15px", display: radioSelection === "dresses" ? "inherit" : "none"}} />
+                    <Box sx={{ position: "absolute", top: "0px" }}>
+                      <DoneIcon
+                        sx={{
+                          color: "white",
+                          fontSize: "15px",
+                          display:
+                            radioSelection === "dresses" ? "inherit" : "none",
+                        }}
+                      />
                     </Box>
                   </Box>
                 </Box>
@@ -533,7 +542,13 @@ const BannerShop = (props: any) => {
                     type="radio"
                     name="radioOptions"
                     value="wallets"
-                    style={{ transform: "scale(1.5)", opacity:"0", position:"relative", zIndex:"2" }}
+                    style={{
+                      transform: "scale(1.5)",
+                      opacity: "0",
+                      position: "relative",
+                      zIndex: "2",
+                      cursor: "pointer",
+                    }}
                     checked={radioSelection === "wallets"}
                     onChange={handleRadioChange}
                   />
@@ -553,8 +568,15 @@ const BannerShop = (props: any) => {
                       left: "-4px",
                     }}
                   >
-                    <Box sx={{position:"absolute", top:"0px"}}>
-                      <DoneIcon sx={{color:"white", fontSize:"15px", display: radioSelection === "wallets" ? "inherit" : "none"}} />
+                    <Box sx={{ position: "absolute", top: "0px" }}>
+                      <DoneIcon
+                        sx={{
+                          color: "white",
+                          fontSize: "15px",
+                          display:
+                            radioSelection === "wallets" ? "inherit" : "none",
+                        }}
+                      />
                     </Box>
                   </Box>
                 </Box>
@@ -694,7 +716,9 @@ const BannerShop = (props: any) => {
                   },
                 }}
               >
-                {imagePreview ? null : <AddToPhotosIcon />}
+                {imagePreview ? null : (
+                  <AddPhotoAlternateOutlinedIcon sx={{ color: "white" }} />
+                )}
                 <VisuallyHiddenInput type="file" onChange={handleImageSelect} />
               </Button>
             </Box>
@@ -748,11 +772,11 @@ const BannerShop = (props: any) => {
         <Grid item sx={{ display: "flex" }}>
           <img
             src={sideLine}
-            style={{ marginTop: "124px", paddingLeft: "5px", height: "104px" }}
+            style={{ marginTop: "154px", paddingLeft: "5px", height: "104px" }}
           />
           <Typography
             sx={{
-              pt: 20.5,
+              pt: 24.5,
               ml: 2,
               fontFamily: "myAvenirRegular",
               fontSize: "12px",

@@ -16,7 +16,8 @@ import {
 import upperLine from "../../assets/line.svg";
 import sideLine from "../../assets/sideLine.svg";
 import { toast } from "react-toastify";
-import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
+// import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const VisuallyHiddenInput = styled("input")({
@@ -83,7 +84,7 @@ const BannerIntro = (props: any) => {
     subtitle: "",
     sendNotification: true,
   })
-  // console.log(image);
+  console.log(image);
 
   const handleFormChange = (e: any) : void => {
     const {name, value, checked} = e.target;
@@ -508,7 +509,7 @@ const BannerIntro = (props: any) => {
                   },
                 }}
               >
-                {imagePreview ? null : <AddToPhotosIcon />}
+                {imagePreview ? null : <AddPhotoAlternateOutlinedIcon sx={{color:"white"}} />}
                 <VisuallyHiddenInput type="file" onChange={handleImageSelect} />
               </Button>
             </Box>
