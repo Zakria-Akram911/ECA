@@ -11,13 +11,13 @@ import {
   TextField,
   Typography,
   styled,
-  Switch
+  Switch,
 } from "@mui/material";
 import upperLine from "../../assets/line.svg";
 import sideLine from "../../assets/sideLine.svg";
 import { toast } from "react-toastify";
 // import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
+import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const VisuallyHiddenInput = styled("input")({
@@ -74,7 +74,6 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-
 const BannerIntro = (props: any) => {
   const [imagePreview, setImagePreview] = React.useState<any>(props?.bannerURL);
   const [image, setImage] = React.useState();
@@ -83,18 +82,18 @@ const BannerIntro = (props: any) => {
     title: "",
     subtitle: "",
     sendNotification: true,
-  })
+  });
   console.log(image);
 
-  const handleFormChange = (e: any) : void => {
-    const {name, value, checked} = e.target;
-    const newValue = name == 'sendNotification' ? checked : value;
-    console.log(newValue)
+  const handleFormChange = (e: any): void => {
+    const { name, value, checked } = e.target;
+    const newValue = name == "sendNotification" ? checked : value;
+    console.log(newValue);
     setFormValues({
       ...formValues,
-      [name]: newValue
-    })
-  }
+      [name]: newValue,
+    });
+  };
 
   const handleImageSelect = (e: any) => {
     if (e?.target) {
@@ -121,7 +120,7 @@ const BannerIntro = (props: any) => {
 
   function handleFormSubmit(e: any): void {
     e.preventDefault();
-    console.log(formValues)
+    console.log(formValues);
   }
 
   const handleSendtoApp = () => {};
@@ -220,7 +219,7 @@ const BannerIntro = (props: any) => {
             >
               <Box
                 sx={{
-                  background: "whitesmoke",
+                  background: "white",
                   color: "black",
                   width: "240px",
                   height: "35px",
@@ -262,7 +261,7 @@ const BannerIntro = (props: any) => {
                     placeholder="Choose Category"
                     IconComponent={KeyboardArrowDownIcon}
                     sx={{
-                      background: "whitesmoke",
+                      background: "white",
                       border: "0.5px solid #939393",
                       // color: "black",
                       width: "283px",
@@ -316,7 +315,7 @@ const BannerIntro = (props: any) => {
               </Box>
             </Box>
           </Box>
-          <Box sx={{m:"20px 0px 5px"}}>
+          <Box sx={{ m: "20px 0px 5px" }}>
             <Box>
               <Typography
                 sx={{
@@ -345,21 +344,22 @@ const BannerIntro = (props: any) => {
                       value={formValues.title}
                       onChange={handleFormChange}
                       sx={{
-                        "& .MuiInputBase-root":{
-                          height:"37px"
+                        "& .MuiInputBase-root": {
+                          height: "37px",
+                          background: "white",
                         },
                         // "& input": {
                         //   p: "20px 10px",
                         // },
-                        "& ::placeholder":{
-                          fontSize:"13px"
-                        }
+                        "& ::placeholder": {
+                          fontSize: "13px",
+                        },
                       }}
                     />
                   </Box>
                   <Box sx={{ m: "5px 0px" }}>
                     <FormLabel sx={{ fontSize: "12px", lineHeight: "16.39px" }}>
-                    * A subtitle to preview what’s in store
+                      * A subtitle to preview what’s in store
                     </FormLabel>
                     <TextField
                       variant="outlined"
@@ -373,10 +373,11 @@ const BannerIntro = (props: any) => {
                       sx={{
                         "& .MuiInputBase-root": {
                           p: "5px 10px",
+                          background: "white",
                         },
-                        "& ::placeholder":{
-                          fontSize:"13px"
-                        }
+                        "& ::placeholder": {
+                          fontSize: "13px",
+                        },
                       }}
                     />
                   </Box>
@@ -402,7 +403,7 @@ const BannerIntro = (props: any) => {
                   fontSize: "14px",
                   // color: `${disableFeature ? "#B3C3D5" : "#1F2834"}`,
                   fontWeight: 600,
-                  lineHeight:"19.12px",
+                  lineHeight: "19.12px",
                   fontFamily: "myAvenirRegular",
                 }}
               >
@@ -426,27 +427,27 @@ const BannerIntro = (props: any) => {
             </Grid>
           </Grid>
           <Box>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "#222222",
-              color: "White",
-              width: "100%",
-              mt: 2,
-              fontSize: "18px",
-              fontWeight: "bold",
-              height: "37px",
-              boxShadow: "none",
-              textTransform: "none",
-              ":hover": {
+            <Button
+              variant="contained"
+              sx={{
                 bgcolor: "#222222",
+                color: "White",
+                width: "100%",
+                mt: 2,
+                fontSize: "18px",
+                fontWeight: "bold",
+                height: "37px",
                 boxShadow: "none",
-              },
-            }}
-            onClick={handleSendtoApp}
-          >
-            Send to app
-          </Button>
+                textTransform: "none",
+                ":hover": {
+                  bgcolor: "#222222",
+                  boxShadow: "none",
+                },
+              }}
+              onClick={handleSendtoApp}
+            >
+              Send to app
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={0.3}></Grid>
@@ -509,7 +510,9 @@ const BannerIntro = (props: any) => {
                   },
                 }}
               >
-                {imagePreview ? null : <AddPhotoAlternateOutlinedIcon sx={{color:"white"}} />}
+                {imagePreview ? null : (
+                  <AddPhotoAlternateOutlinedIcon sx={{ color: "white" }} />
+                )}
                 <VisuallyHiddenInput type="file" onChange={handleImageSelect} />
               </Button>
             </Box>

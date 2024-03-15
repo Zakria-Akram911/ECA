@@ -1,22 +1,24 @@
-import { Box, Button, Grid, Typography, useMediaQuery } from '@mui/material';
-import React from 'react';
-import BannerIntro from './BannerIntro';
-import BannerHome from './BannerHome';
-import BannerShop from './BannerShop';
-import BannerNewBanner from './BannerNewBanner';
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
+import React from "react";
+import BannerIntro from "./BannerIntro";
+import BannerHome from "./BannerHome";
+import BannerShop from "./BannerShop";
+import BannerNewBanner from "./BannerNewBanner";
 
 const category = ["New Season", "Winter", "Summer"];
-const shopCategories = ["T-Shirts", "Casual Shirts", "Pants"]
-const numberOfItems = ["1","2","3","4","5","6","7"]
+const shopCategories = ["T-Shirts", "Casual Shirts", "Pants"];
+const numberOfItems = ["1", "2", "3", "4", "5", "6", "7"];
 
 const BannerMainComponent = () => {
   const [tab, setTab] = React.useState<string>("Intro");
   const matchesLargeScreen = useMediaQuery("(min-width:1281px)");
   return (
-    <Box sx={{
-      justifyContent: "center",
-      width: matchesLargeScreen ? "930px" : "auto",
-    }}>
+    <Box
+      sx={{
+        justifyContent: "center",
+        width: matchesLargeScreen ? "930px" : "auto",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -101,15 +103,13 @@ const BannerMainComponent = () => {
               border: `${
                 tab === "Intro" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
               }`,
-              borderRight:"0",
+              borderRight: "0",
               boxShadow: `${
-                tab === "Intro"
-                  ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)"
-                  : "none"
+                tab === "Intro" ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)" : "none"
               }`,
               textTransform: "math-auto",
               fontSize: "18px",
-              p: "5px 25px",
+              p: "2px 32px",
               borderRadius: "5px 0 0 5px",
               "&. :hover": {
                 color: `${tab === "Intro" ? "black" : "white"}`,
@@ -129,9 +129,7 @@ const BannerMainComponent = () => {
               fontWeight: `${tab === "Home" ? "600" : "500"}`,
               color: `${tab === "Home" ? "white" : "black"}`,
               boxShadow: `${
-                tab === "Home"
-                  ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)"
-                  : "none"
+                tab === "Home" ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)" : "none"
               }`,
               border: `${
                 tab === "Home" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
@@ -139,7 +137,7 @@ const BannerMainComponent = () => {
               // borderRight:"0",
               textTransform: "math-auto",
               fontSize: "18px",
-              p: "5px 25px",
+              p: "2px 32px",
               borderRadius: "0",
             }}
           >
@@ -156,9 +154,7 @@ const BannerMainComponent = () => {
               fontWeight: `${tab === "Shop" ? "600" : "500"}`,
               color: `${tab === "Shop" ? "white" : "black"}`,
               boxShadow: `${
-                tab === "Shop"
-                  ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)"
-                  : "none"
+                tab === "Shop" ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)" : "none"
               }`,
               border: `${
                 tab === "Shop" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
@@ -166,7 +162,7 @@ const BannerMainComponent = () => {
               // borderRight:"0",
               textTransform: "math-auto",
               fontSize: "18px",
-              p: "5px 25px",
+              p: "2px 32px",
               borderRadius: "0",
             }}
           >
@@ -188,11 +184,13 @@ const BannerMainComponent = () => {
                   : "none"
               }`,
               border: `${
-                tab === "NewBanner" ? "0.5px solid #3D0871" : "0.5px solid #DADADA"
+                tab === "NewBanner"
+                  ? "0.5px solid #3D0871"
+                  : "0.5px solid #DADADA"
               }`,
               textTransform: "math-auto",
               fontSize: "18px",
-              p: "5px 25px",
+              p: "2px 32px",
               borderRadius: "0 5px 5px 0",
             }}
           >
@@ -201,27 +199,14 @@ const BannerMainComponent = () => {
         </Grid>
       </Grid>
 
-      {tab === "Intro" && (
-        <BannerIntro
-          category = {category}
-        />
-      )}
-      {tab === "Home" && (
-        <BannerHome />
-      )}
+      {tab === "Intro" && <BannerIntro category={category} />}
+      {tab === "Home" && <BannerHome />}
       {tab === "Shop" && (
-        <BannerShop
-          category={shopCategories}
-          numberOfItems = {numberOfItems}
-        />
+        <BannerShop category={shopCategories} numberOfItems={numberOfItems} />
       )}
-      {tab === "NewBanner" && (
-        <BannerNewBanner
-        category = {category}
-        />
-      )}
+      {tab === "NewBanner" && <BannerNewBanner category={category} />}
     </Box>
-  )
-}
+  );
+};
 
-export default BannerMainComponent
+export default BannerMainComponent;

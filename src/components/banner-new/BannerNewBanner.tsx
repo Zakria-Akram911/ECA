@@ -13,7 +13,7 @@ import upperLine from "../../assets/line.svg";
 import sideLine from "../../assets/line-1200.png";
 import { toast } from "react-toastify";
 // import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
+import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const VisuallyHiddenInput = styled("input")({
@@ -33,7 +33,7 @@ const BannerNewBanner = (props: any) => {
   const [image, setImage] = React.useState();
   const [category, setCategory] = React.useState(props?.category[0]);
   console.log(image);
-  console.log(category)
+  console.log(category);
 
   const handleImageSelect = (e: any) => {
     if (e?.target) {
@@ -56,7 +56,7 @@ const BannerNewBanner = (props: any) => {
 
       reader.readAsDataURL(file);
     }
-  }; 
+  };
 
   const handleSendtoApp = () => {};
 
@@ -79,7 +79,7 @@ const BannerNewBanner = (props: any) => {
             bgcolor: "rgba(245, 245, 245, 1)",
             p: 5,
             borderRadius: "5px",
-            height:"326px"
+            height: "326px",
           }}
         >
           <Box>
@@ -155,7 +155,7 @@ const BannerNewBanner = (props: any) => {
             >
               <Box
                 sx={{
-                  background: "whitesmoke",
+                  background: "white",
                   color: "black",
                   width: "240px",
                   height: "35px",
@@ -197,7 +197,7 @@ const BannerNewBanner = (props: any) => {
                     placeholder="Choose Category"
                     IconComponent={KeyboardArrowDownIcon}
                     sx={{
-                      background: "whitesmoke",
+                      background: "white",
                       border: "0.5px solid #939393",
                       // color: "black",
                       width: "283px",
@@ -252,27 +252,27 @@ const BannerNewBanner = (props: any) => {
             </Box>
           </Box>
           <Box>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "#222222",
-              color: "White",
-              width: "100%",
-              mt: 2,
-              fontSize: "18px",
-              fontWeight: "bold",
-              height: "37px",
-              boxShadow: "none",
-              textTransform: "none",
-              ":hover": {
+            <Button
+              variant="contained"
+              sx={{
                 bgcolor: "#222222",
+                color: "White",
+                width: "100%",
+                mt: 2,
+                fontSize: "18px",
+                fontWeight: "bold",
+                height: "37px",
                 boxShadow: "none",
-              },
-            }}
-            onClick={handleSendtoApp}
-          >
-            Send to app
-          </Button>
+                textTransform: "none",
+                ":hover": {
+                  bgcolor: "#222222",
+                  boxShadow: "none",
+                },
+              }}
+              onClick={handleSendtoApp}
+            >
+              Send to app
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={0.3}></Grid>
@@ -289,14 +289,16 @@ const BannerNewBanner = (props: any) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems:"center",
+            alignItems: "center",
             height: "628px",
           }}
         >
           <Box
-            sx={{
-              // height: "60%",
-            }}
+            sx={
+              {
+                // height: "60%",
+              }
+            }
           >
             <Typography
               sx={{
@@ -336,7 +338,9 @@ const BannerNewBanner = (props: any) => {
                   },
                 }}
               >
-                {imagePreview ? null : <AddPhotoAlternateOutlinedIcon sx={{color:"white"}} />}
+                {imagePreview ? null : (
+                  <AddPhotoAlternateOutlinedIcon sx={{ color: "white" }} />
+                )}
                 <VisuallyHiddenInput type="file" onChange={handleImageSelect} />
               </Button>
             </Box>
@@ -378,6 +382,6 @@ const BannerNewBanner = (props: any) => {
       </Grid>
     </Box>
   );
-}
+};
 
-export default BannerNewBanner
+export default BannerNewBanner;

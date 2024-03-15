@@ -152,7 +152,7 @@ const BannerShop = (props: any) => {
                 >
                   <Box
                     sx={{
-                      background: "whitesmoke",
+                      background: "white",
                       color: "black",
                       width: "240px",
                       height: "35px",
@@ -194,7 +194,7 @@ const BannerShop = (props: any) => {
                         placeholder="Choose Category"
                         IconComponent={KeyboardArrowDownIcon}
                         sx={{
-                          background: "whitesmoke",
+                          background: "white",
                           border: "0.5px solid #939393",
                           // color: "black",
                           width: "283px",
@@ -278,7 +278,7 @@ const BannerShop = (props: any) => {
                   >
                     <Box
                       sx={{
-                        background: "whitesmoke",
+                        background: "white",
                         color: "black",
                         width: "48px",
                         height: "35px",
@@ -320,7 +320,7 @@ const BannerShop = (props: any) => {
                           placeholder="Choose Category"
                           IconComponent={KeyboardArrowDownIcon}
                           sx={{
-                            background: "whitesmoke",
+                            background: "white",
                             border: "0.5px solid #939393",
                             // color: "black",
                             width: "96px",
@@ -509,6 +509,7 @@ const BannerShop = (props: any) => {
                 <Box
                   sx={{
                     border: "0.5px solid black",
+                    background: "white",
                     width: "239px",
                     height: "35px",
                     borderRadius: "5px",
@@ -586,6 +587,7 @@ const BannerShop = (props: any) => {
                     width: "239px",
                     height: "35px",
                     borderRadius: "5px",
+                    background: "white",
                     // textAlign:"center",
                     display: "flex",
                     alignItems: "center",
