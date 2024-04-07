@@ -1,0 +1,58 @@
+{
+  "orders": [
+    {
+      "orderId": 1,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/product1.jpg",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": true,
+      "promotionDiscountInPercent": 50,
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England",
+          "street": "21 Delamere Road"
+        }
+      ]
+    },
+    {
+      "orderId": 2,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/product2.jpg",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": false,
+      "promotionDiscountInPercent": 0,
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England",
+          "street": "21 Delamere Road"
+        }
+      ]
+    }
+  ]
+}

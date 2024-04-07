@@ -1,15 +1,12 @@
-
 // import { Box } from "@mui/material";
 // import Sidebar from "../../components/Sidebar";
 // import Typography from "@mui/material/Typography";
 // import OrdersMain from "../../components/Orders/OrdersMain";
 
 // const Orders = () => {
-
-
-
-//   return (<Sidebar>
-//     <Box>
+//   return (
+//     <Sidebar>
+//       <Box>
 //         <Typography sx={{ fontSize: "20px", color: "#222222" }}>
 //           Orders
 //         </Typography>
@@ -17,30 +14,52 @@
 //       <Box>
 //         <Typography
 //           variant="h1"
-//           sx={{ fontSize: "40px", fontFamily: "myAvenirBold", fontWeight: "900" }}
+//           sx={{
+//             fontSize: "40px",
+//             fontFamily: "myAvenirBold",
+//             fontWeight: "900",
+//           }}
 //         >
 //           Alya Co Shop
 //         </Typography>
 //       </Box>
 //       <Box sx={{ mt: "40px" }}>
-//         <OrdersMain/>
+//         <OrdersMain />
 //       </Box>
-//   </Sidebar>)
+//     </Sidebar>
+//   );
 // };
 
-// export default Orders;
+import { Box } from "@mui/material";
 import Sidebar from "../../components/Sidebar";
 import Typography from "@mui/material/Typography";
+import OrderNewMain from "../../components/Order-new/OrderNewMain";
 
 const Orders = () => {
-
-
-
-  return <Sidebar>
-    <Typography sx={{ fontSize: "20px" }}>
-      
-      Orders</Typography>
-  </Sidebar>
+  return (
+    <Sidebar>
+      <Box>
+        <Typography sx={{ fontSize: "20px", color: "#222222" }}>
+          Orders
+        </Typography>
+      </Box>
+      <Box>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: "40px",
+            fontFamily: "myAvenirBold",
+            fontWeight: "900",
+          }}
+        >
+          PoshLittleStar
+        </Typography>
+      </Box>
+      <Box sx={{ mt: "40px" }}>
+        <OrderNewMain />
+      </Box>
+    </Sidebar>
+  );
 };
 
 export default Orders;
