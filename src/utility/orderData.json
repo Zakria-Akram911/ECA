@@ -9,20 +9,23 @@
       "size": "L",
       "customerName": "Wilson Alves",
       "email": "wilsonalves@hotmail.com",
-      "imageUrl": "/assets/product1.jpg",
+      "imageUrl": "/assets/p2.png",
       "orderDate": "08042024",
       "price": 100,
       "shippingFee": 1,
       "total": 1,
       "promotionUsed": true,
       "promotionDiscountInPercent": 50,
+      "deliveryCharges": 5,
+      "deliveryType": "Express Delivery",
+      "orderStatus": "New",
       "address": [
         {
           "city": "London",
           "country": "United Kingdom",
           "countryCode": "90988",
           "fullName": "Wilson Alvesss",
-          "state": "England",
+          "state": "England W5 3JL",
           "street": "21 Delamere Road"
         }
       ]
@@ -36,20 +39,23 @@
       "size": "L",
       "customerName": "Wilson Alves",
       "email": "wilsonalves@hotmail.com",
-      "imageUrl": "/assets/product2.jpg",
+      "imageUrl": "/assets/p1.png",
       "orderDate": "08042024",
       "price": 100,
       "shippingFee": 1,
       "total": 1,
       "promotionUsed": false,
       "promotionDiscountInPercent": 0,
+      "deliveryCharges": 2.9,
+      "deliveryType": "Standard delivery",
+      "orderStatus": "New",
       "address": [
         {
           "city": "London",
           "country": "United Kingdom",
           "countryCode": "90988",
           "fullName": "Wilson Alvesss",
-          "state": "England",
+          "state": "England W5 3JL",
           "street": "21 Delamere Road"
         }
       ]

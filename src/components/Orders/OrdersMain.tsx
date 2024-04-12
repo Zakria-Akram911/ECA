@@ -19,7 +19,7 @@ function OrdersMain() {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(shippingOrders)
+  console.log(shippingOrders);
   return (
     <Box>
       <Grid container sx={{ justifyContent: "center" }}>
