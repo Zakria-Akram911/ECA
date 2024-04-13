@@ -85,12 +85,6 @@ const NewOrder = (props: any) => {
     setFocusModalOpen(false);
   };
 
-  // const onBeingOrderClickHandler = () => {
-  //   if (orderStatus === "begin") {
-  //     setOrderStatus("workingOn");
-  //   }
-  // };
-
   return (
     <>
       {orderData.map((order: any) => (
