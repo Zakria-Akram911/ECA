@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Box,
-  Button,
-  Modal,
-  Typography,
-  Dialog,
-  DialogTitle,
-} from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import OrderNewCard from "./OrderNewCard";
 import chatIcon from "../../assets/chat-icon.svg";
 import chatActiveIcon from "../../assets/chat-active-icon.svg";
@@ -17,12 +9,8 @@ import settingsActiveIcon from "../../assets/settings-active-icon.svg";
 import React from "react";
 import SettingsModal from "./SettingsModal";
 
-const focusModalStyle = {
+const modalStyle = {
   position: "absolute",
-  top: "50%",
-  right: "43px",
-  transform: "translate(0%, -50%)",
-  width: 805,
   bgcolor: "white",
   boxShadow: 24,
   p: 1,
@@ -30,32 +18,27 @@ const focusModalStyle = {
   borderRadius: "5px",
 };
 
+const focusModalStyle = {
+  top: "50%",
+  right: "43px",
+  transform: "translate(0%, -50%)",
+  width: 805,
+};
+
 const chatModalStyle = {
-  position: "absolute",
   top: "50%",
   right: "55px",
   transform: "translate(0%, -28%)",
   width: 380,
   height: 354,
-  bgcolor: "white",
-  boxShadow: 24,
-  p: 1,
-  boxSizing: "border-box",
-  borderRadius: "5px",
 };
 
 const settingsModalStyle = {
-  position: "absolute",
   top: "50%",
   right: "55px",
   transform: "translate(0%, -60%)",
   width: 286,
   height: 181,
-  bgcolor: "white",
-  boxShadow: 24,
-  p: 1,
-  boxSizing: "border-box",
-  borderRadius: "5px",
 };
 
 const NewOrder = (props: any) => {
@@ -143,12 +126,7 @@ const NewOrder = (props: any) => {
                 }}
               />
               {chatModalOpen && order.id === modalOrderId && (
-                <Box
-                  sx={{
-                    ...chatModalStyle,
-                    zIndex: "1400",
-                  }}
-                >
+                <Box sx={{ ...modalStyle, ...chatModalStyle, zIndex: "1400" }}>
                   <Box position="relative">
                     <Box
                       sx={{
@@ -187,7 +165,7 @@ const NewOrder = (props: any) => {
                 }}
               />
               {focusModalOpen && order.id === modalOrderId && (
-                <Box sx={{ ...focusModalStyle, zIndex: "1400" }}>
+                <Box sx={{ ...modalStyle, ...focusModalStyle, zIndex: "1400" }}>
                   <>
                     <OrderNewCard orderData={filteredData} />
                   </>
@@ -214,7 +192,9 @@ const NewOrder = (props: any) => {
                 }}
               />
               {settingsModalOpen && order.id === modalOrderId && (
-                <Box sx={{ ...settingsModalStyle, zIndex: "1400" }}>
+                <Box
+                  sx={{ ...modalStyle, ...settingsModalStyle, zIndex: "1400" }}
+                >
                   <>
                     <Box position="relative">
                       <SettingsModal orderData={filteredData} />
