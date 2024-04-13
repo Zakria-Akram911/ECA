@@ -1,7 +1,15 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import React from "react";
 
 const OrderNewCard = (props: any) => {
   const data = props.orderData;
+  const [orderStatus, setOrderStatus] = React.useState("begin");
+
+  const onBeingOrderClickHandler = () => {
+    if (orderStatus === "begin") {
+      setOrderStatus("workingOn");
+    }
+  };
 
   const formattedDate = (date: any) => {
     if (!date) {
@@ -49,6 +57,37 @@ const OrderNewCard = (props: any) => {
   return (
     <>
       <Grid container columnGap="10px">
+        <Grid item>
+          <Box
+            component="img"
+            src={data.imageUrl}
+            sx={{ width: "188px", height: "206px", display: "block" }}
+          />
+          <Button
+            variant="contained"
+            sx={{
+              boxShadow: "0px 2px 6px 0px rgba(0, 0, 0, 0.13)",
+              bgcolor: "rgba(34, 34, 34, 1)",
+              height: "30px",
+              width: "188px",
+              fontSize: "14px",
+              fontWeight: "800",
+              lineHeight: "19.12px",
+              letterSpacing: "0.17px",
+              textTransform: "initial",
+              mt: "10px",
+              fontFamily: "myAvenirRegular",
+              "&:hover": {
+                bgcolor: "rgba(14, 14, 14, 1)",
+                boxShadow: "0px 2px 6px 0px rgba(0, 0, 0, 0.13)",
+              },
+            }}
+            onClick={onBeingOrderClickHandler}
+          >
+            {orderStatus === "begin" && "Begin order"}
+            {orderStatus === "workingOn" && "Working On"}
+          </Button>
+        </Grid>
         <Grid item>
           <Box
             sx={{

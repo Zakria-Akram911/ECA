@@ -1,7 +1,7 @@
 {
   "orders": [
     {
-      "orderId": 1,
+      "id": 1,
       "productTitle": "Summer stylist dress",
       "category": "Cozy",
       "subcategory": "Jumper",
@@ -18,7 +18,11 @@
       "promotionDiscountInPercent": 50,
       "deliveryCharges": 5,
       "deliveryType": "Express Delivery",
-      "orderStatus": "New",
+      "orderStatus": 1,
+      "paymentMethod": "Apple Pay",
+      "paymentId": "u15565675gggu6667",
+      "uid": "QWYU786TYHB",
+      "userId": "QWYU7867346736TYHB",
       "address": [
         {
           "city": "London",
@@ -31,7 +35,7 @@
       ]
     },
     {
-      "orderId": 2,
+      "id": 2,
       "productTitle": "Summer stylist dress",
       "category": "Cozy",
       "subcategory": "Jumper",
@@ -48,7 +52,11 @@
       "promotionDiscountInPercent": 0,
       "deliveryCharges": 2.9,
       "deliveryType": "Standard delivery",
-      "orderStatus": "New",
+      "orderStatus": 1,
+      "paymentMethod": "Google Pay",
+      "paymentId": "u15578775gggu6667",
+      "uid": "QWYU8754TYHB",
+      "userId": "QWYU66627637266TYHB",
       "address": [
         {
           "city": "London",
