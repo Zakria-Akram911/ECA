@@ -41,7 +41,7 @@ const settingsModalStyle = {
   height: 181,
 };
 
-const DispatchOrder = (props: any) => {
+const CancelledOrder = (props: any) => {
   const orderData = props.orderData.orders;
   const [focusModalOpen, setFocusModalOpen] = React.useState(false);
   const [chatModalOpen, setChatModalOpen] = React.useState(false);
@@ -89,7 +89,7 @@ const DispatchOrder = (props: any) => {
     <>
       {orderData.map((order: any) => (
         <>
-          {order.orderStatus === 3 && (
+          {order.orderStatus === 4 && (
             <Grid container columnGap="10px" mt="30px" key={order.id}>
               <Grid item>
                 <OrderNewCard orderData={order} />
@@ -243,4 +243,4 @@ const DispatchOrder = (props: any) => {
   );
 };
 
-export default DispatchOrder;
+export default CancelledOrder;

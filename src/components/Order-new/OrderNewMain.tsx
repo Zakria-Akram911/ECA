@@ -3,6 +3,8 @@ import React from "react";
 import NewOrder from "./NewOrder";
 import orderData from "../../utility/orderData.json";
 import WorkingOnOrder from "./WorkingOnOrder";
+import DispatchOrder from "./DispatchOrder";
+import CancelledOrder from "./CancelledOrder";
 
 const OrderNewMain = () => {
   const [tab, setTab] = React.useState<string>("New");
@@ -99,18 +101,18 @@ const OrderNewMain = () => {
           <Button
             variant="outlined"
             className="product-main-category-btns"
-            onClick={() => setTab("Cancellled")}
+            onClick={() => setTab("Cancelled")}
             sx={{
-              background: `${tab === "Cancellled" ? "black" : "white"}`,
-              fontWeight: `${tab === "Cancellled" ? "600" : "500"}`,
-              color: `${tab === "Cancellled" ? "white" : "black"}`,
+              background: `${tab === "Cancelled" ? "black" : "white"}`,
+              fontWeight: `${tab === "Cancelled" ? "600" : "500"}`,
+              color: `${tab === "Cancelled" ? "white" : "black"}`,
               boxShadow: `${
-                tab === "Cancellled"
+                tab === "Cancelled"
                   ? "0px 2px 6px 0px rgba(0, 0, 0, 0.07)"
                   : "none"
               }`,
               border: `${
-                tab === "Cancellled"
+                tab === "Cancelled"
                   ? "0.5px solid #3D0871"
                   : "0.5px solid #DADADA"
               }`,
@@ -132,6 +134,16 @@ const OrderNewMain = () => {
       {tab === "Working-on" && (
         <Box sx={{ mt: "40px" }}>
           <WorkingOnOrder orderData={orderData} />
+        </Box>
+      )}
+      {tab === "Dispatched" && (
+        <Box sx={{ mt: "40px" }}>
+          <DispatchOrder orderData={orderData} />
+        </Box>
+      )}
+      {tab === "Cancelled" && (
+        <Box sx={{ mt: "40px" }}>
+          <CancelledOrder orderData={orderData} />
         </Box>
       )}
     </>

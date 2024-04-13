@@ -70,6 +70,8 @@ const OrderNewCard = (props: any) => {
               bgcolor:
                 data.orderStatus === 3
                   ? "rgba(51, 171, 83, 1)"
+                  : data.orderStatus === 4
+                  ? "rgba(142, 49, 49, 1)"
                   : "rgba(34, 34, 34, 1)",
               height: "30px",
               width: "188px",
@@ -78,7 +80,7 @@ const OrderNewCard = (props: any) => {
               lineHeight: "19.12px",
               letterSpacing: "0.17px",
               textTransform: "initial",
-              mt: "10px",
+              mt: "8px",
               fontFamily: "myAvenirRegular",
               "&:hover": {
                 bgcolor: "rgba(14, 14, 14, 1)",
@@ -93,7 +95,7 @@ const OrderNewCard = (props: any) => {
               ? "Dispatch"
               : data.orderStatus === 3
               ? "Order completed"
-              : ""}
+              : "Cancelled"}
           </Button>
         </Grid>
         <Grid item>
@@ -169,7 +171,7 @@ const OrderNewCard = (props: any) => {
                   sx={{
                     borderRadius: "5px",
                     background: "rgba(245, 245, 245, 1)",
-                    mt: 2,
+                    mt: 1.5,
                   }}
                 >
                   <Typography
