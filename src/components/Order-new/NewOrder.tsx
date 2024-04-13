@@ -154,12 +154,12 @@ const NewOrder = (props: any) => {
                       sx={{
                         width: "0",
                         height: "0",
-                        borderLeft: "20px solid transparent",
-                        borderRight: "20px solid transparent",
-                        borderBottom: "25px solid white",
+                        borderLeft: "15px solid transparent",
+                        borderRight: "15px solid transparent",
+                        borderBottom: "21px solid white",
                         transform: "rotate(90deg)",
                         position: "absolute",
-                        top: "75px",
+                        top: "78px",
                         right: "-31px",
                       }}
                     />
@@ -222,13 +222,13 @@ const NewOrder = (props: any) => {
                         sx={{
                           width: "0",
                           height: "0",
-                          borderLeft: "13px solid transparent",
-                          borderRight: "13px solid transparent",
-                          borderBottom: "20px solid white",
+                          borderLeft: "15px solid transparent",
+                          borderRight: "15px solid transparent",
+                          borderBottom: "22px solid white",
                           transform: "rotate(90deg)",
                           position: "absolute",
-                          top: "87px",
-                          right: "-30px",
+                          top: "86px",
+                          right: "-31px",
                         }}
                       />
                     </Box>
