@@ -41,7 +41,7 @@ const settingsModalStyle = {
   height: 181,
 };
 
-const NewOrder = (props: any) => {
+const WorkingOnOrder = (props: any) => {
   const orderData = props.orderData.orders;
   const [focusModalOpen, setFocusModalOpen] = React.useState(false);
   const [chatModalOpen, setChatModalOpen] = React.useState(false);
@@ -89,7 +89,7 @@ const NewOrder = (props: any) => {
     <>
       {orderData.map((order: any) => (
         <>
-          {order.orderStatus === 1 && (
+          {order.orderStatus === 2 && (
             <Grid container columnGap="10px" mt="30px" key={order.id}>
               <Grid item>
                 <OrderNewCard orderData={order} />
@@ -243,4 +243,4 @@ const NewOrder = (props: any) => {
   );
 };
 
-export default NewOrder;
+export default WorkingOnOrder;

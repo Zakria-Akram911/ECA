@@ -2,6 +2,7 @@ import { Box, Button, Grid } from "@mui/material";
 import React from "react";
 import NewOrder from "./NewOrder";
 import orderData from "../../utility/orderData.json";
+import WorkingOnOrder from "./WorkingOnOrder";
 
 const OrderNewMain = () => {
   const [tab, setTab] = React.useState<string>("New");
@@ -126,6 +127,11 @@ const OrderNewMain = () => {
       {tab === "New" && (
         <Box sx={{ mt: "40px" }}>
           <NewOrder orderData={orderData} />
+        </Box>
+      )}
+      {tab === "Working-on" && (
+        <Box sx={{ mt: "40px" }}>
+          <WorkingOnOrder orderData={orderData} />
         </Box>
       )}
     </>

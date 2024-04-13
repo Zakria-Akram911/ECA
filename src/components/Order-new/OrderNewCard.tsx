@@ -67,7 +67,10 @@ const OrderNewCard = (props: any) => {
             variant="contained"
             sx={{
               boxShadow: "0px 2px 6px 0px rgba(0, 0, 0, 0.13)",
-              bgcolor: "rgba(34, 34, 34, 1)",
+              bgcolor:
+                data.orderStatus === 3
+                  ? "rgba(51, 171, 83, 1)"
+                  : "rgba(34, 34, 34, 1)",
               height: "30px",
               width: "188px",
               fontSize: "14px",
@@ -84,8 +87,13 @@ const OrderNewCard = (props: any) => {
             }}
             onClick={onBeingOrderClickHandler}
           >
-            {orderStatus === "begin" && "Begin order"}
-            {orderStatus === "workingOn" && "Working On"}
+            {data.orderStatus === 1
+              ? "Begin Order"
+              : data.orderStatus === 2
+              ? "Dispatch"
+              : data.orderStatus === 3
+              ? "Order completed"
+              : ""}
           </Button>
         </Grid>
         <Grid item>
