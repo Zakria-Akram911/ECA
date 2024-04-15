@@ -173,7 +173,11 @@ const NewOrder = (props: any) => {
                   />
                   {focusModalOpen && order.id === modalOrderId && (
                     <Box
-                      sx={{ ...modalStyle, ...focusModalStyle, zIndex: "1400" }}
+                      sx={{
+                        ...modalStyle,
+                        ...focusModalStyle,
+                        zIndex: "1400",
+                      }}
                     >
                       <>
                         <OrderNewCard orderData={filteredData} />
