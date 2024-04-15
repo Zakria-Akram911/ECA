@@ -13,14 +13,14 @@ const modalStyle = {
   position: "absolute",
   bgcolor: "white",
   boxShadow: 24,
-  p: 1,
+  p: "10px",
   boxSizing: "border-box",
   borderRadius: "5px",
 };
 
 const focusModalStyle = {
   top: "50%",
-  right: "43px",
+  right: "45px",
   transform: "translate(0%, -50%)",
   width: 805,
 };
@@ -31,6 +31,7 @@ const chatModalStyle = {
   transform: "translate(0%, -28%)",
   width: 380,
   height: 354,
+  p: 1,
 };
 
 const settingsModalStyle = {
@@ -119,6 +120,7 @@ const WorkingOnOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {chatModalOpen && order.id === modalOrderId && (
@@ -160,6 +162,7 @@ const WorkingOnOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {focusModalOpen && order.id === modalOrderId && (
@@ -189,6 +192,7 @@ const WorkingOnOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {settingsModalOpen && order.id === modalOrderId && (

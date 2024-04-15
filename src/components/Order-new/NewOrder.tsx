@@ -13,24 +13,25 @@ const modalStyle = {
   position: "absolute",
   bgcolor: "white",
   boxShadow: 24,
-  p: 1,
+  p: "10px",
   boxSizing: "border-box",
   borderRadius: "5px",
 };
 
 const focusModalStyle = {
   top: "50%",
-  right: "43px",
+  right: "45px",
   transform: "translate(0%, -50%)",
   width: 805,
 };
 
 const chatModalStyle = {
   top: "50%",
-  right: "55px",
-  transform: "translate(0%, -28%)",
+  right: "56px",
+  transform: "translate(0%, -26%)",
   width: 380,
   height: 354,
+  p: 1,
 };
 
 const settingsModalStyle = {
@@ -90,7 +91,13 @@ const NewOrder = (props: any) => {
       {orderData.map((order: any) => (
         <>
           {order.orderStatus === 1 && (
-            <Grid container columnGap="10px" mt="30px" key={order.id}>
+            <Grid
+              container
+              columnGap="10px"
+              mt="30px"
+              key={order.id}
+              position="relative"
+            >
               <Grid item>
                 <OrderNewCard orderData={order} />
               </Grid>
@@ -119,13 +126,14 @@ const NewOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {chatModalOpen && order.id === modalOrderId && (
                     <Box
                       sx={{ ...modalStyle, ...chatModalStyle, zIndex: "1400" }}
                     >
-                      <Box position="relative">
+                      <Box>
                         <Box
                           sx={{
                             width: "0",
@@ -136,7 +144,7 @@ const NewOrder = (props: any) => {
                             transform: "rotate(90deg)",
                             position: "absolute",
                             top: "78px",
-                            right: "-31px",
+                            right: "-24px",
                           }}
                         />
                       </Box>
@@ -160,6 +168,7 @@ const NewOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {focusModalOpen && order.id === modalOrderId && (
@@ -189,6 +198,7 @@ const NewOrder = (props: any) => {
                           ? "1400"
                           : "1200",
                       position: "relative",
+                      cursor: "pointer",
                     }}
                   />
                   {settingsModalOpen && order.id === modalOrderId && (

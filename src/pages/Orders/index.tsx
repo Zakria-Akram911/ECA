@@ -55,7 +55,7 @@ const Orders = () => {
           PoshLittleStar
         </Typography>
       </Box>
-      <Box sx={{ mt: "40px" }}>
+      <Box sx={{ mt: "40px", mb: "40px" }}>
         <OrderNewMain />
       </Box>
     </Sidebar>

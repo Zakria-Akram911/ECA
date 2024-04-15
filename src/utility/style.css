@@ -35,7 +35,6 @@
 p,
 input {
   font-family: "myAvenirRegular" !important;
-
   margin-bottom: 0 !important;
 }
 
@@ -46,7 +45,7 @@ h4,
 h5,
 h6,
 p {
-  color: #222222;
+  color: rgba(0, 0, 0, 1);
 }
 
 .sidebar a.active {

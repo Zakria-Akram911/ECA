@@ -76,7 +76,7 @@ const OrderNewCard = (props: any) => {
               height: "30px",
               width: "188px",
               fontSize: "14px",
-              fontWeight: "800",
+              fontWeight: "600",
               lineHeight: "19.12px",
               letterSpacing: "0.17px",
               textTransform: "initial",
@@ -90,7 +90,7 @@ const OrderNewCard = (props: any) => {
             onClick={onBeingOrderClickHandler}
           >
             {data.orderStatus === 1
-              ? "Begin Order"
+              ? "Begin order"
               : data.orderStatus === 2
               ? "Dispatch"
               : data.orderStatus === 3
@@ -318,15 +318,15 @@ const OrderNewCard = (props: any) => {
                                   marginRight: "10px",
                                 }}
                               >
-                                {`£${data.price}`}
+                                {`£${data.price.toFixed(2)}`}
                               </span>
-                              <span>{`£${
+                              <span>{`£${(
                                 (data.price * data.promotionDiscountInPercent) /
                                 100
-                              }`}</span>
+                              ).toFixed(2)}`}</span>
                             </>
                           ) : (
-                            <span>{`£${data.price}`}</span>
+                            <span>{`£${data.price.toFixed(2)}`}</span>
                           )}
                         </Typography>
                         <Typography
@@ -339,7 +339,9 @@ const OrderNewCard = (props: any) => {
                             mb: "5px !important",
                           }}
                         >
-                          <span>{`£${data.deliveryCharges}`}</span>
+                          <>
+                            <span>{`£${data.deliveryCharges.toFixed(2)}`}</span>
+                          </>
                         </Typography>
                         <Typography
                           sx={{
@@ -351,7 +353,7 @@ const OrderNewCard = (props: any) => {
                             mb: "5px !important",
                           }}
                         >
-                          <span>{`£${totalPrice()}`}</span>
+                          <span>{`£${totalPrice().toFixed(2)}`}</span>
                         </Typography>
                       </Grid>
                     </Grid>
