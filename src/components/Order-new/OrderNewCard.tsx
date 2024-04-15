@@ -76,12 +76,12 @@ const OrderNewCard = (props: any) => {
               height: "30px",
               width: "188px",
               fontSize: "14px",
-              fontWeight: "600",
+              fontWeight: "800",
               lineHeight: "19.12px",
               letterSpacing: "0.17px",
               textTransform: "initial",
-              mt: "8px",
-              fontFamily: "myAvenirRegular",
+              mt: "7px",
+              fontFamily: "myAvenirLight",
               "&:hover": {
                 bgcolor: "rgba(14, 14, 14, 1)",
                 boxShadow: "0px 2px 6px 0px rgba(0, 0, 0, 0.13)",
@@ -159,6 +159,7 @@ const OrderNewCard = (props: any) => {
                             textTransform:
                               index > 1 ? "uppercase" : "capitalize",
                             mb: "6px !important",
+                            fontFamily: "myAvenirMedium !important",
                           }}
                         >
                           {item}
@@ -193,7 +194,9 @@ const OrderNewCard = (props: any) => {
                     >
                       Customer Name:
                     </span>{" "}
-                    {data.customerName}
+                    <span style={{ fontFamily: "myAvenirMedium" }}>
+                      {data.customerName}
+                    </span>
                   </Typography>
                   <Divider sx={{ border: "2px solid white" }} />
                   <Typography
@@ -215,7 +218,9 @@ const OrderNewCard = (props: any) => {
                       {" "}
                       Email address:
                     </span>
-                    {data.email}
+                    <span style={{ fontFamily: "myAvenirMedium" }}>
+                      {data.email}
+                    </span>
                   </Typography>
                 </Box>
               </Grid>
@@ -277,7 +282,7 @@ const OrderNewCard = (props: any) => {
                               sx={{
                                 fontWeight:
                                   index === 1
-                                    ? data.deliveryType === "Express Delivery"
+                                    ? data.deliveryType === "Express delivery"
                                       ? 900
                                       : 350
                                     : 350,
@@ -286,11 +291,17 @@ const OrderNewCard = (props: any) => {
                                 letterSpacing: "0",
                                 color:
                                   index === 1
-                                    ? data.deliveryType === "Express Delivery"
+                                    ? data.deliveryType === "Express delivery"
                                       ? "rgba(19, 56, 191, 1)"
                                       : "rgba(99, 99, 99, 1)  "
                                     : "rgba(99, 99, 99, 1)",
                                 mb: "5px !important",
+                                fontFamily:
+                                  index === 1
+                                    ? data.deliveryType === "Express delivery"
+                                      ? "myAvenirBold !important"
+                                      : "myAvenirRegular !important"
+                                    : "myAvenirRegular !important",
                               }}
                             >
                               {item + ":"}

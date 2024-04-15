@@ -19,9 +19,8 @@ const modalStyle = {
 };
 
 const focusModalStyle = {
-  top: "50%",
-  right: "45px",
-  transform: "translate(0%, -50%)",
+  top: "-10px",
+  left: "-10px",
   width: 805,
 };
 
@@ -91,7 +90,13 @@ const DispatchOrder = (props: any) => {
       {orderData.map((order: any) => (
         <>
           {order.orderStatus === 3 && (
-            <Grid container columnGap="10px" mt="30px" key={order.id}>
+            <Grid
+              container
+              columnGap="10px"
+              mt="30px"
+              key={order.id}
+              position="relative"
+            >
               <Grid item>
                 <OrderNewCard orderData={order} />
               </Grid>
@@ -147,7 +152,7 @@ const DispatchOrder = (props: any) => {
                 </Box>
 
                 {/* Focus Icon Button */}
-                <Box className="focus-icon" mb="10px" position="relative">
+                <Box className="focus-icon" mb="10px">
                   <Box
                     component="img"
                     src={

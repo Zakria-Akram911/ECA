@@ -19,9 +19,8 @@ const modalStyle = {
 };
 
 const focusModalStyle = {
-  top: "50%",
-  right: "45px",
-  transform: "translate(0%, -50%)",
+  top: "-10px",
+  left: "-10px",
   width: 805,
 };
 
@@ -153,7 +152,8 @@ const NewOrder = (props: any) => {
                 </Box>
 
                 {/* Focus Icon Button */}
-                <Box className="focus-icon" mb="10px" position="relative">
+                {/* <Box className="focus-icon" mb="10px" position="relative"> */}
+                <Box className="focus-icon" mb="10px">
                   <Box
                     component="img"
                     src={

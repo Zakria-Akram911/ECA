@@ -34,6 +34,7 @@ const OrderNewMain = () => {
               "&. :hover": {
                 color: `${tab === "New" ? "black" : "white"}`,
               },
+              fontFamily: "myAvenirLight",
             }}
           >
             New
@@ -63,6 +64,7 @@ const OrderNewMain = () => {
               fontSize: "18px",
               p: "2px 32px",
               borderRadius: "0",
+              fontFamily: "myAvenirLight",
             }}
           >
             Working on
@@ -92,6 +94,7 @@ const OrderNewMain = () => {
               fontSize: "18px",
               p: "2px 32px",
               borderRadius: "0",
+              fontFamily: "myAvenirLight",
             }}
           >
             Dispatched
@@ -120,6 +123,7 @@ const OrderNewMain = () => {
               fontSize: "18px",
               p: "2px 38px",
               borderRadius: "0 5px 5px 0",
+              fontFamily: "myAvenirLight",
             }}
           >
             Cancelled
