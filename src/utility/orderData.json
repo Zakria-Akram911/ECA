@@ -1,0 +1,174 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/p2.png",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": true,
+      "promotionDiscountInPercent": 50,
+      "deliveryCharges": 5,
+      "deliveryType": "Express delivery",
+      "orderStatus": 1,
+      "paymentMethod": "Apple Pay",
+      "paymentId": "u15565675gggu6667",
+      "uid": "QWYU786TYHB",
+      "userId": "QWYU7867346736TYHB",
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England W5 3JL",
+          "street": "21 Delamere Road"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/p1.png",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": false,
+      "promotionDiscountInPercent": 0,
+      "deliveryCharges": 2.9,
+      "deliveryType": "Standard delivery",
+      "orderStatus": 1,
+      "paymentMethod": "Google Pay",
+      "paymentId": "u15578775gggu6667",
+      "uid": "QWYU8754TYHB",
+      "userId": "QWYU66627637266TYHB",
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England W5 3JL",
+          "street": "21 Delamere Road"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/p1.png",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": false,
+      "promotionDiscountInPercent": 0,
+      "deliveryCharges": 2.9,
+      "deliveryType": "Standard delivery",
+      "orderStatus": 2,
+      "paymentMethod": "Google Pay",
+      "paymentId": "u15578775gggu6667",
+      "uid": "QWYU8754TYHB",
+      "userId": "QWYU66627637266TYHB",
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England W5 3JL",
+          "street": "21 Delamere Road"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/p2.png",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": false,
+      "promotionDiscountInPercent": 0,
+      "deliveryCharges": 2.9,
+      "deliveryType": "Standard delivery",
+      "orderStatus": 3,
+      "paymentMethod": "Google Pay",
+      "paymentId": "u15578775gggu6667",
+      "uid": "QWYU8754TYHB",
+      "userId": "QWYU66627637266TYHB",
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England W5 3JL",
+          "street": "21 Delamere Road"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "productTitle": "Summer stylist dress",
+      "category": "Cozy",
+      "subcategory": "Jumper",
+      "color": "Light grey",
+      "size": "L",
+      "customerName": "Wilson Alves",
+      "email": "wilsonalves@hotmail.com",
+      "imageUrl": "/assets/p1.png",
+      "orderDate": "08042024",
+      "price": 100,
+      "shippingFee": 1,
+      "total": 1,
+      "promotionUsed": false,
+      "promotionDiscountInPercent": 0,
+      "deliveryCharges": 2.9,
+      "deliveryType": "Standard delivery",
+      "orderStatus": 4,
+      "paymentMethod": "Google Pay",
+      "paymentId": "u15578775gggu6667",
+      "uid": "QWYU8754TYHB",
+      "userId": "QWYU66627637266TYHB",
+      "address": [
+        {
+          "city": "London",
+          "country": "United Kingdom",
+          "countryCode": "90988",
+          "fullName": "Wilson Alvesss",
+          "state": "England W5 3JL",
+          "street": "21 Delamere Road"
+        }
+      ]
+    }
+  ]
+}

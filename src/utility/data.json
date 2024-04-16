@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "productId": "1",
+      "productImage": "/assets/product1.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "64",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": true,
+      "newArrival": false,
+      "hoursRemaining": "18",
+      "category": ["Jumpers", "Home", "Men"]
+    },
+    {
+      "productId": "2",
+      "productImage": "/assets/product2.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "64",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": false,
+      "newArrival": false,
+      "hoursRemaining": "34",
+      "category": ["Jumpers", "Sale", "Women"]
+    },
+    {
+      "productId": "3",
+      "productImage": "/assets/product3.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "64",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": false,
+      "newArrival": false,
+      "hoursRemaining": "48",
+      "category": ["Jumpers", "Home", "Men"]
+    },
+    {
+      "productId": "4",
+      "productImage": "/assets/product1.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "64",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": true,
+      "newArrival": true,
+      "hoursRemaining": "80",
+      "category": ["Jumpers", "Sale", "Women"]
+    },
+    {
+      "productId": "5",
+      "productImage": "/assets/product2.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "64",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": false,
+      "newArrival": true,
+      "hoursRemaining": "90",
+      "category": ["Jumpers", "Sale", "Women"]
+    },
+    {
+      "productId": "6",
+      "productImage": "/assets/product2.jpg",
+      "productTitle": "Men Black Printed Hooded Sweatshirt",
+      "productQuantity": "0",
+      "productPrice": "23.90",
+      "show": true,
+      "featured": false,
+      "newArrival": true,
+      "hoursRemaining": "100",
+      "category": ["Jumpers", "Home", "Men"]
+    }
+  ]
+}

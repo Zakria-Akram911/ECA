@@ -1,0 +1,143 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7ba9e0a7-abe8-437c-a682-27fa19a01908");
+@font-face {
+  font-family: "Avenir LT W01_35 Light1475496";
+  src: url("./fonts/avenir.woff2") format("woff2"),
+    url("./fonts/avenir.woff") format("woff");
+}
+
+@font-face {
+  font-family: myAvenirBold;
+  src: url(AvenirLTStd-Black.otf);
+}
+
+@font-face {
+  font-family: myAvenirMedium;
+  src: url(Avenir-Medium.ttf);
+}
+
+@font-face {
+  font-family: myAvenirLight;
+  src: url(AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: myAvenirRegular;
+  src: url(Avenir-Regular.ttf);
+}
+
+* {
+  font-family: "myAvenirRegular";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+p,
+input {
+  font-family: "myAvenirRegular" !important;
+  margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sidebar a.active {
+  background-color: #222222;
+  color: white !important;
+}
+
+.dashboard-order-table thead > tr th {
+  border: 0;
+}
+/* .dashboard-order-table tbody > tr {
+    border: 0;
+  } */
+
+.dashboard-order-table tbody > tr > th,
+.dashboard-order-table tbody > tr > td {
+  /* padding: 10px 0px; */
+  border: 0;
+
+  /* text-align: center; */
+}
+
+/* .dashboard-order-table tbody > tr > th , */
+.dashboard-order-table tbody > tr > td > div {
+  border-top: 0.5px solid #939393;
+  border-bottom: 0.5px solid #939393;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  /* border-radius: 0px 8px 8px 0px;  */
+}
+
+.dashboard-order-table tbody > tr > th > div {
+  padding: 20px 10px;
+  border-top: 0.5px solid #939393;
+  border-left: 0.5px solid #939393;
+  border-bottom: 0.5px solid #939393;
+  border-radius: 3px 0px 0px 3px;
+  margin-bottom: 20px;
+}
+
+.dashboard-order-table tbody > tr > td:last-child div {
+  border-radius: 0 3px 3px 0;
+}
+
+.dashboard-order-table tbody > tr > td:nth-last-child(1) > div {
+  border-right: 0.5px solid #939393;
+}
+
+.product-main-category-btns:hover {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid black !important;
+  /* border-right: none !important; */
+}
+
+.product-category-btn:hover {
+  background-color: transparent !important;
+  color: black !important;
+  border: none !important;
+  border-bottom: 1px solid black !important;
+}
+
+.add-product-btn {
+  border: 1px solid black !important;
+}
+
+.add-product-btn:hover {
+  background: transparent !important;
+  color: black;
+  border: 1px solid black;
+}
+
+.add-product-form-single-field {
+  margin-bottom: 15px;
+}
+
+.NewProductMainSingleComponent {
+  margin-top: 20px;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background-color: black !important;
+  color: white !important;
+  width: 240px;
+}
+
+/* .menuDropdownList::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: whitesmoke;
+} */
